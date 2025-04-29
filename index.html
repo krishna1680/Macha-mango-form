@@ -1,75 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machaa Mango Farms</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff8e1; }
-    header { background-color: #ffb300; color: white; padding: 20px; text-align: center; }
-    nav { background: #ffe082; padding: 10px; text-align: center; }
-    nav a { margin: 0 15px; color: #333; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; }
-    footer { background-color: #ffb300; color: white; text-align: center; padding: 10px; }
-    .button { background: #ff6f00; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-    .gallery img { width: 200px; margin: 10px; border-radius: 10px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machaa Mango</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SwiperJS (for Image Slider) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-<body>
 
-<header>
-  <h1>Machaa Mango Farms</h1>
-  <p>From Our Trees to Your Table — Fresh, Naturally Grown Mangoes.</p>
-</header>
+<body class="bg-yellow-50 text-gray-800">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#mangoes">Our Mangoes</a>
-  <a href="#order">Order Now</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <div class="text-2xl font-bold text-green-600">Machaa Mango 🍋</div>
+    <div>
+      <button class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600">Order Now</button>
+    </div>
+  </nav>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>At Machaa Mango Farms, we believe in growing mangoes the natural way — fresh, chemical-free, and full of love. Nestled in [Your City, State], our farm produces some of the juiciest and sweetest mangoes you'll ever taste!</p>
-</section>
+  <!-- Hero Section with Image Slider -->
+  <section class="mt-6">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/featured/?mango" class="w-full h-[400px] object-cover rounded-lg" alt="Fresh Mangoes">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/featured/?fruit,mango" class="w-full h-[400px] object-cover rounded-lg" alt="Juicy Mangoes">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/featured/?mango,tree" class="w-full h-[400px] object-cover rounded-lg" alt="Mango Tree">
+        </div>
+      </div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-<section id="mangoes">
-  <h2>Our Mangoes</h2>
-  <ul>
-    <li>Banganapalli Mangoes</li>
-    <li>Alphonso Mangoes</li>
-    <li>Other Seasonal Specialities</li>
-  </ul>
-  <p>All our mangoes are naturally ripened and handpicked at the perfect time for you!</p>
-</section>
+  <!-- About Section -->
+  <section class="max-w-5xl mx-auto mt-10 text-center px-4">
+    <h2 class="text-4xl font-bold text-green-700 mb-4">Why Machaa Mango?</h2>
+    <p class="text-lg text-gray-600">Sweetest, juiciest, and hand-picked straight from our farms! 100% organic and naturally ripened mangoes delivered fresh to your home.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white shadow-lg rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Farm Fresh 🍃</h3>
+        <p>Direct from our farms, no middlemen!</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Naturally Sweet 🍯</h3>
+        <p>We let them ripen on trees the natural way.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Fast Delivery 🚚</h3>
+        <p>Harvested and shipped the same day!</p>
+      </div>
+    </div>
+  </section>
 
-<section id="order">
-  <h2>Order Now</h2>
-  <p>Call or WhatsApp us directly to book your fresh box of Machaa Mangoes!</p>
-  <a class="button" href="https://wa.me/yourwhatsapplink" target="_blank">Order on WhatsApp</a>
-</section>
+  <!-- Footer -->
+  <footer class="mt-16 py-6 text-center bg-white shadow-inner">
+    <p class="text-gray-500">&copy; 2025 Machaa Mango. All rights reserved.</p>
+  </footer>
 
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/200x150?text=Mango+1" alt="Mango 1">
-    <img src="https://via.placeholder.com/200x150?text=Mango+2" alt="Mango 2">
-    <img src="https://via.placeholder.com/200x150?text=Mango+Farm" alt="Mango Farm">
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: +91-XXXXXXXXXX</p>
-  <p>Location: [Your City, State]</p>
-</section>
-
-<footer>
-  <p>© 2025 Machaa Mango Farms. All rights reserved.</p>
-</footer>
+  <!-- SwiperJS Script -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 
 </body>
 </html>
